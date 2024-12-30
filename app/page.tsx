@@ -1,6 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+import 'primereact/resources/themes/lara-light-indigo/theme.css';  // Theme CSS
+import 'primereact/resources/primereact.min.css';  // PrimeReact CSS
+import 'primeicons/primeicons.css';  // PrimeIcons CSS
+
+
+import { Button } from 'primereact/button';  // PrimeReact Button component
+import { InputText } from 'primereact/inputtext';  // PrimeReact InputText component
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -13,6 +21,13 @@ export default function Home() {
           height={38}
           priority
         />
+        
+        {/* PrimeReact Button */}
+        <Button label="Click Me" icon="pi pi-check" className="p-button-success" />
+        
+        {/* PrimeReact Input */}
+        <InputText placeholder="Enter something..." className="p-inputtext p-component" />
+        
         <ol>
           <li>
             Get started by editing <code>app/page.tsx</code>.
